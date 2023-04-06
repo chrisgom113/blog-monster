@@ -8,10 +8,12 @@ router.get('/', async (req, res) => {
       include: [User],
     });
 
-    const posts = psotData.map((post) => post.get({ plain: true }));
+    const posts = postData.map((post) => post.get({ plain: true }));
 
     res.render('public-view', { posts });
   } catch (error) {
     res.status(500).json(error);
   }
 });
+
+module.exports = router;
