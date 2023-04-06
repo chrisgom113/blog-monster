@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang='en'>
 
 <head>
@@ -10,17 +11,15 @@
 
 <body class='flex-column min-100-vh'>
     <header class='hero'>
-        <h1 class='app-title'><a href='/'>Blog Monster</a></h1>
+        <h1 class='app-title'><a href='/'>Blog Monster Home</a></h1>
         <nav class='navbar'>
             <ul>
                 <li class='li-inline nav-item'><a href='/dashboard'>Dashboard</a></li>
-
                 {{#if logged_in}}
-                <li class='li-inline nav-item'><a href='#' id='logout-link'> | Logout</a></li>
+                <li class='li-inline nav-item'><a href='#' id='logout-link'> Logout</a></li>
                 {{else}}
                 <li class='li-inline nav-item'><a href='/login'>Login</a></li>
                 {{/if}}
-
             </ul>
         </nav>
     </header>

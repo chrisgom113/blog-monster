@@ -1,17 +1,21 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models/');
 
-
 //View all posts
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
-      include: [User],
+      include: [
+        {
+          model: User,
+          attribute: ['username'],
+        },
+      ],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    res.render('all', { posts });
+    res.render('all', { posts, logged_in: req.session.logged_in });
   } catch (error) {
     res.status(500).json(error);
   }
