@@ -1,9 +1,9 @@
 :root {
     --primary: #ffffff;
     --secondary: #61407e;
-    --tertiary: #c6d166;
+    --tertiary: #eb69bb;
     --dark: #0f1b07;
-    --border-radius: 0.2rem;
+    --border-radius: 25px;
   }
   
   * {
@@ -29,13 +29,13 @@
     font-family: "Arial", fantasy;
     font-weight: 700;
     margin: 0;
-    color: var(--tertiary);
+    color: var(--dark);
     line-height: 1.25;
     letter-spacing: 1px;
   }
   
   h2 a:visited {
-    color: var(--tertiary);
+    color: var(--dark);
   }
   
   h2 a {
@@ -165,7 +165,8 @@
   
   .card-header {
     color: var(--primary);
-    background-color: var(--dark);
+    background-color: var(--tertiary);
+    border-radius: 25px;
     padding: 1%;
   }
   
