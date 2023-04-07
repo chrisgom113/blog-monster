@@ -54,13 +54,6 @@ connect session sequelize
 - User can edit and delete their blog posts
 
 
-## VS Code File/Folders
-
-![VS Code Structure](./assets/vsCode_visual.png)
-
-## Insomnia Testing
-
-![insomnia view](./assets/insomnia_visual.png)
 
 # License
 
