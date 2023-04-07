@@ -8,13 +8,13 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attribute: ['username'],
+          attributes: ['username'],
         },
       ],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
-
+console.log(posts);
     res.render('all', { posts, logged_in: req.session.logged_in });
   } catch (error) {
     res.status(500).json(error);
